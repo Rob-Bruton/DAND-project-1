@@ -1,0 +1,29 @@
+#to view cities#
+SELECT *
+FROM city_list
+WHERE country = 'United States'
+
+#to pull global data#
+SELECT *
+FROM global_data
+
+#to pull local data#
+SELECT year, city, avg_temp
+FROM city_data
+WHERE city = 'Jacksonville'
+
+#to view extreme cities in US#
+SELECT city, avg_temp
+FROM city_data
+WHERE country = 'United States'
+ORDER BY avg_temp
+
+#to view extreme cities Global#
+SELECT city, avg_temp
+FROM city_data
+ORDER BY avg_temp
+
+#to pull extreme cities#
+SELECT year, city, avg_temp
+FROM city_data
+WHERE city IN ('Miami', 'Minneapolis', 'Ulaanbaatar', 'Khartoum')
